@@ -1,0 +1,84 @@
+.header{
+  background-color: $menubg;
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  &__menu{
+    display: flex;
+  }
+  &__menu-item + .header__menu-item{
+    margin-left: 25px;
+  }
+  &__menu-item{
+    display: flex;
+  }
+  &__menu-link{
+    color: $menu;
+    align-items: center;
+  }
+  &__cart-inner{
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+  &__cart-box{
+    display: flex;
+  }
+  &__cart-item{
+    margin-top: 5px;
+  }
+  &__cart-link{
+    position: relative;
+    path{
+      fill: $menu;
+    }
+    span{
+      position: absolute;
+      top: -27px;
+      left: 13px;
+      color: $accent;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+  &__cart-item + .header__cart-item{
+    margin-left: 15px;
+  }
+  &__menu-btn{
+    display: flex;
+    margin-left: 40px;
+    cursor: pointer;
+    font-size: 0;
+    line-height: 0;
+    font-weight: 0;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid $menu;
+    border-radius: 5px;
+    span{
+      content: '';
+      width: 40px;
+      height: 2px;
+      background-color: $menu;
+      margin: 25px 5px;
+      &:before,
+      &:after{
+        content: '';
+        width: 40px;
+        height: 2px;
+        background-color: $menu;
+        position: absolute;
+        left: 10px;
+      }
+      &:before{
+        top: 10px;
+      }
+      &:after{
+        bottom: 10px;
+      }
+      }
+  }
+}
+

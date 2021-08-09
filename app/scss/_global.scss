@@ -1,0 +1,21 @@
+html,
+body{
+  width: 100%;
+}
+
+body{
+  color: $default;
+  font-size: 14px;
+  line-height: 32px;
+  @extend %OpenSans-400;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.logo{
+  width: 192px;
+}

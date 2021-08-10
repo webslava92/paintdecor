@@ -1,0 +1,10 @@
+@media(max-width: 1200px) {
+  .header{
+    &__menu{
+      display: none;
+    }
+    &__menu-btn{
+      display: flex;
+    }
+  }
+}

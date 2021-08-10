@@ -3,7 +3,7 @@
   &__inner{
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
   }
   &__menu{
     display: flex;
@@ -15,8 +15,30 @@
     display: flex;
   }
   &__menu-link{
-    color: $menu;
+    color: rgba($menu,.6);
     align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all .3s;
+    position: relative;
+    span{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 3px;
+      border: 1px solid rgba($menu,.8);
+      background-color: rgba($menu,.8);
+      border-radius: 0 0 100% 100%;
+    }
+    &:hover{
+      color: $menu;
+    }
+  }
+  &__cart-wrapper{
+    display: flex;
+    justify-content: space-between;
   }
   &__cart-inner{
     margin-left: 40px;
@@ -32,22 +54,37 @@
   &__cart-link{
     position: relative;
     path{
-      fill: $menu;
+      fill: rgba($menu,.6);
+      transition: all .3s;
     }
     span{
       position: absolute;
-      top: -27px;
-      left: 13px;
-      color: $accent;
-      font-size: 18px;
+      top: -20px;
+      left: 15px;
+      color: $default;
+      font-size: 12px;
+      line-height: 1.5;
       font-weight: 700;
+      border-radius: 50%;
+      min-width: 20px;
+      background-color: rgba($menu,.8);
+      text-align: center;
+      transition: all .3s;
+    }
+    &:hover{
+      path{
+        fill: $menu;
+      }
+      span{
+        background-color: $menu;
+      }
     }
   }
   &__cart-item + .header__cart-item{
     margin-left: 15px;
   }
   &__menu-btn{
-    display: flex;
+    display: none;
     margin-left: 40px;
     cursor: pointer;
     font-size: 0;
@@ -55,30 +92,48 @@
     font-weight: 0;
     position: relative;
     background-color: transparent;
-    border: 2px solid $menu;
-    border-radius: 5px;
+    border: 1px solid rgba($menu,.3);
+    border-radius: 8px;
+    width: 60px;
+    height: 40px;
+    padding: 0px !important;
+    transition: all .3s;
     span{
       content: '';
-      width: 40px;
+      width: 25px;
       height: 2px;
-      background-color: $menu;
-      margin: 25px 5px;
+      background-color: rgba($menu,.3);
+      margin: auto auto;
+      transition: all .3s;
       &:before,
       &:after{
         content: '';
-        width: 40px;
+        width: 25px;
         height: 2px;
-        background-color: $menu;
+        background-color: rgba($menu,.3);
         position: absolute;
-        left: 10px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        transition: all .3s;
       }
       &:before{
-        top: 10px;
+        top: 12px;
       }
       &:after{
-        bottom: 10px;
+        bottom: 12px;
       }
+    }
+    &:hover{
+      border: 1px solid rgba($menu,1);
+      span{
+        background-color: rgba($menu,1);
+        &:before,
+        &:after{
+          background-color: rgba($menu,1);
+        }
       }
+    }
   }
 }
 

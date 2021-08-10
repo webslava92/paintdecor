@@ -5,7 +5,17 @@ $menubg: rgba($default,0.9);
 $menu: #fff;
 
 
-%OpenSans-400{
-  font-family: 'OpenSans-Regular', sans-serif;
+%Rubik-300{
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
+%Rubik-400{
+  font-family: 'Rubik-Regular', sans-serif;
   font-weight: 400;
+}
+
+%Rubik-400{
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: 700;
 }

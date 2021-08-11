@@ -4,9 +4,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px 0;
   }
   &__menu{
     display: flex;
+    position: relative;
   }
   &__menu-item + .header__menu-item{
     margin-left: 25px;
@@ -14,7 +16,8 @@
   &__menu-item{
     display: flex;
   }
-  &__menu-link{
+  &__menu-link,
+  &__menu-button{
     color: rgba($menu,.6);
     align-items: center;
     font-size: 16px;
@@ -24,14 +27,43 @@
     span{
       content: '';
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 13px;
+      right: -13px;
       width: 8px;
       height: 3px;
-      border: 1px solid rgba($menu,.8);
-      background-color: rgba($menu,.8);
-      border-radius: 0 0 100% 100%;
+      border: 4px solid transparent; 
+      border-top: 4px solid rgba($menu,.6);
+      transition: all .3s;
     }
+    &:hover{
+      color: $menu;
+      span{
+        border-top: 4px solid $menu;
+      }
+    }
+  }
+  &__menu-list{
+    margin-right: 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 !important;
+  }
+  &__product-menu{
+    display: none;
+    transition: all .5s;
+  }
+  &__product-menu--active{
+    display: block !important;
+    position: absolute;
+    top: 49px;
+    left: 120px;
+    background-color: $menubg;
+  }
+  &__product-link{
+    color: rgba($menu,.6);
+    text-transform: uppercase;
+    padding: 5px 25px;
     &:hover{
       color: $menu;
     }

@@ -1,0 +1,10 @@
+.footer{
+  background-color: $menubg;
+  display: none;
+  &__top{
+    display: flex;
+  }
+  &__bottom{
+    background-color: #fff;
+  }
+}

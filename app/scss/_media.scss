@@ -1,7 +1,46 @@
 @media(max-width: 1200px) {
   .header{
+    &__menu-inner{
+      background-color: $menubg;
+    }
     &__menu{
-      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: $menubg;
+      display: block;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      transition: all .5s;
+      .header__menu-item + .header__menu-item{
+        margin-left: 0;
+      }
+      .header__menu-item{
+        display: block;
+      }
+    }
+    &__menu--active{
+      transform: scaleY(1);
+      transition: all .5s;
+      padding: 15px 0 30px !important;
+    }
+    &__menu-link,
+    &__menu-button{
+      padding: 8px 0;
+      margin-left: 40px;
+    }
+    &__menu-list{
+      display: block;
+    }
+    &__product-menu--active{
+      background-color: transparent;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    &__product-link{
+      margin-left: 40px;
     }
     &__menu-btn{
       display: flex;

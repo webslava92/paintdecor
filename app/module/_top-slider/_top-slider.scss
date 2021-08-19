@@ -1,0 +1,125 @@
+.top-slider{
+  .slick-arrow{
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 100;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  .slick-arrow:before{
+    content: '';
+    background-image: url('../images/icons/arrow.svg');
+    position: absolute;
+    top: 12px;
+    height: 18px;
+    width: 10px;
+    z-index: 900;
+  }
+  .slick-arrow:hover{
+    background-color: $accent;
+    .slick-arrow:before{
+      background-image: url('..images/icons/arrow-hover.svg');
+    }
+  }
+  .slick-prev{
+    left: 50px;
+    &:before{
+      left: 14px;
+    }
+  }
+  .slick-next{
+    right: 50px;
+    &::before{
+      transform: scale(-1,1);
+      right: 14px;
+    }
+  }
+  .slick-dots{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    margin-left: -15px;
+    cursor: pointer;
+  }
+  .slick-dots button{
+    font-size: 0;
+    line-height: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $menu;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-left: 15px;
+  }
+  .slick-active button{
+    border: 2px solid $accent;
+  }
+  &__item{
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__item-1{
+    background-image: url('../images/products/puransatin-bg.jpg');
+  }
+  &__item-wrap{
+    display: flex;
+    height: calc(100vh - 70px);
+    position: relative;
+  }
+  &__item-content{
+    display: block;
+    margin: 100px;
+  }
+  &__item-title{
+    font-size: 50px;
+    @extend %Rubik-700;
+    line-height: 1.5;
+    z-index: 700;
+  }
+  &__item-subtitle{
+    font-size: 30px;
+    line-height: 1.5;
+    @extend %Rubik-300;
+    text-transform: uppercase;
+    z-index: 750;
+    span{
+      display: block;
+      text-transform: lowercase;
+      color: $accent;
+    }
+  }
+  &__item-img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &__item-2{
+    background-image: url('../images/products/lotusan-bg.jpg');
+  }
+  &__item-3{
+    background-image: url('../images/products/dryonic-bg.jpg');
+  }
+  &__item-4{
+    background-image: url('../images/products/dolceseta-bg.jpg');
+  }
+  &__item-5{
+    background-image: url('../images/products/anticoveneziano-bg.jpg');
+  }
+  &__item-6{
+    background-image: url('../images/products/fasade-bg.jpg');
+  }
+  &__item-7{
+    background-image: url('../images/products/decor-bg.jpg');
+  }
+}

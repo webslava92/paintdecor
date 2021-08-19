@@ -24,6 +24,7 @@
     font-weight: 700;
     transition: all .3s;
     position: relative;
+    @extend %Rubik-700;
     span{
       content: '';
       position: absolute;

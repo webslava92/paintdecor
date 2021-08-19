@@ -11,4 +11,7 @@ $(function(){
     $('.header__product-menu').removeClass('header__product-menu--active');
     $('.header__menu').removeClass('header__menu--active');
   });
+  $(".top-slider__list").slick({
+    dots: true,
+  });
 });

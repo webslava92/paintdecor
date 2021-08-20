@@ -1,4 +1,5 @@
 .top-slider{
+  padding-top: 70px;
   .slick-arrow{
     border: none;
     border-radius: 50%;
@@ -45,7 +46,7 @@
   .slick-dots{
     display: flex;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 0;
     right: 0;
     justify-content: center;
@@ -68,9 +69,8 @@
   &__item{
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  &__item-1{
-    background-image: url('../images/products/puransatin-bg.jpg');
+    background-position: center center;
+    height: 100%;
   }
   &__item-wrap{
     display: flex;
@@ -78,21 +78,27 @@
     position: relative;
   }
   &__item-content{
-    display: block;
-    margin: 100px;
+    padding: 100px;
+    margin-left: auto;
+    max-width: 800px;
+    background-color: rgba($background, 0.5);
+    z-index: 100;
+    padding-bottom: 40px !important;
   }
   &__item-title{
     font-size: 50px;
     @extend %Rubik-700;
-    line-height: 1.5;
-    z-index: 700;
+    line-height: 1.3;
+    position: relative;
+    padding-bottom: 30px;
   }
   &__item-subtitle{
     font-size: 30px;
     line-height: 1.5;
     @extend %Rubik-300;
     text-transform: uppercase;
-    z-index: 750;
+    position: relative;
+    padding-bottom: 40px;
     span{
       display: block;
       text-transform: lowercase;
@@ -101,8 +107,13 @@
   }
   &__item-img{
     position: absolute;
-    right: 0;
+    left: 80px;
     bottom: 0;
+    height: 380px;
+    z-index: 0;
+  }
+  &__item-1{
+    background-image: url('../images/products/puransatin-bg.jpg');
   }
   &__item-2{
     background-image: url('../images/products/lotusan-bg.jpg');
@@ -121,5 +132,11 @@
   }
   &__item-7{
     background-image: url('../images/products/decor-bg.jpg');
+  }
+  .top-slider__item-7 .top-slider__item-title{
+    font-size: 36px;
+  }
+  .top-slider__item-7 .top-slider__item-subtitle{
+    font-size: 22px;
   }
 }

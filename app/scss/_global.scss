@@ -22,3 +22,20 @@ body{
     max-height: 60px;
   }
 }
+
+.btn{
+  position: relative;
+  border: transparent;
+  padding: 15px 30px;
+  background-color: $accent;
+  font-size: 20px;
+  @extend %Rubik-700;
+  color: $menu;
+  border-radius: 30px;
+  transition: all .3s;
+  margin-top: 20px;
+  &:hover{
+    background-color: $menu;
+    color: $accent;
+  }
+}

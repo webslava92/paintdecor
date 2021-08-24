@@ -1,0 +1,61 @@
+.visual-menu{
+  &__item{
+    display: flex;
+    position: sticky;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  &__item-1{
+    background-image: url('../images/products/interior-decor-bg.jpg');
+  }
+  &__item-2{
+    background-image: url('../images/products/interior-paint-bg.jpg');
+  }
+  &__item-3{
+    background-image: url('../images/products/fasade-decor-bg.jpg');
+  }
+  &__item-4{
+    background-image: url('../images/products/fasade-paint-bg.jpg');
+  }
+  &__link{
+    margin: 0 auto;
+  }
+  &__title{
+    position: relative;
+    display: block;
+    padding-top: calc(80px + 10vw);
+    padding-bottom: calc(80px + 10vw);
+    text-transform: uppercase;
+    color: $menu;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  &__socials{
+    display: flex;
+    padding: 50px 5px;
+  }
+  &__socials-inner{
+    margin: 0 auto !important;
+  }
+  &__socials-title{
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    color: $default;
+    @extend %Rubik-700;
+  }
+  &__socials-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px !important;
+    path{
+      fill: $accent;
+    }
+  }
+  &__socials-item + .visual-menu__socials-item{
+    margin-left: 30px;
+  }
+}

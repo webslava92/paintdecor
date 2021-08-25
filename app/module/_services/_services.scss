@@ -1,0 +1,36 @@
+.services{
+  padding-top: 70px;
+  background-image: url('../images/products/fasade-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  &__wrapper{
+    display: flex;
+    background-color: rgba($background,0.8);
+    min-height: 100vh;
+  }
+  &__inner{
+    margin: 50px auto;
+  }
+  &__content{
+    display: flex;
+    margin: 50px auto 60px;
+  }
+  &__title{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.5;
+    @extend %Rubik-700;
+  }
+  &__img{
+    max-width: 450px;
+    max-height: 450px;
+    object-fit: cover;
+    margin: 9px 30px 10px 0;
+    float: left;
+  }
+  &__content-info{
+    margin-left: 30px;
+  }
+}

@@ -1,0 +1,14 @@
+.contacts{
+  padding-top: 70px;
+  &__inner{
+    min-height: 100vh;
+    padding: 60px 0;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 1.5;
+    @extend %Rubik-700;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

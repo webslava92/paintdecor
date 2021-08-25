@@ -1,15 +1,13 @@
 .company{
   padding-top: 70px;
-  height: 100vh;
-  min-height: 100%;
   background-image: url('../images/company-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   &__wrapper{
-    background-color: rgba($background, 0.6);
-    height: 100%;
+    background-color: rgba($background, 0.8);
+    min-height: 100vh;
   }
   &__title{
     font-size: 36px;
@@ -19,6 +17,6 @@
   &__text{
     font-size: 18px;
     @extend %Rubik-400;
-    margin-top: 50px;
+    padding: 50px 0;
   }
 }

@@ -50,9 +50,7 @@ select {
 
 body{
   min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-style: normal;
+  @extend %Rubik-400;
   font-size: 14px;
   line-height: 24px;
   color: #373A39;

@@ -14,4 +14,5 @@ $(function(){
   $(".top-slider__list").slick({
     dots: true,
   });
+  $('.contacts__checkbox-input').styler();
 });

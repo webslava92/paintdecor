@@ -45,3 +45,11 @@ body{
     color: $accent;
   }
 }
+
+.title{
+  font-size: 36px;
+  line-height: 1.5;
+  @extend %Rubik-700;
+  display: block;
+  text-align: center;
+}

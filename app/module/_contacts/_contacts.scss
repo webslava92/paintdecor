@@ -1,14 +1,188 @@
 .contacts{
-  padding-top: 70px;
+  padding: 70px 0 60px;
   &__inner{
-    min-height: 100vh;
-    padding: 60px 0;
+    padding-top: 60px;
+    position: relative;
   }
   &__title{
     font-size: 36px;
     line-height: 1.5;
     @extend %Rubik-700;
     text-align: center;
+    margin: 0 auto 30px;
+  }
+  &__list-inner{
+    position: absolute;
+    bottom: -340px;
+    left: 30px;
+    right: 0;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 200;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    position: relative;
+    display: block;
+    width: 200px;
+    padding: 0 15px;
+    margin-left: 50px;
+  }
+  &__item-icon{
+    border-radius: 50%;
+    background-color: $accent;
+    position: absolute;
+    top: 8px;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    border: none;
+    svg{
+      align-items: center;
+      margin: auto auto;
+      path{
+        fill: $menu;
+      }
+    }
+  }
+  &__item-title{
+    display: block;
+    width: 100%;
+    @extend %Rubik-700;
+    span{
+      display: block;
+      width: 100%;
+      @extend %Rubik-400;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  &__item-link{
+    display: block;
+    text-decoration: none;
+    color: $accent;
+    cursor: pointer;
+    font-size: 12px !important;
+    transition: all .3s;
+    &:hover{
+      color: $default;
+    }
+  }
+  &__map{
+    height: 400px;
+  }
+  &__form-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+  }
+  &__formbox{
+    display: flex;
+  }
+  &__form{
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+  }
+  &__form-info{
+    max-width: 33.33%;
+  }
+  &__form-title{
+    font-size: 24px;
+    @extend %Rubik-700;
+  }
+  &__form-subtitle{
+    max-width: 100%;
+    margin-top: 15px;
+  }
+  &__formbox{
+    padding: 20px 10px;
+    width: 66.67%;
+  }
+  &__input-title{
+    font-size: 12px;
+    color: $background;
+    span{
+      color: $accent;
+    }
+  }
+  &__textarea-title{
+    position: absolute;
+    top: 35px;
+    left: 25px;
+  }
+  &__input-title{
+    margin-bottom: 5px;
+  }
+  &__input{
+    padding: 0 10px;
+    border: 1px solid $background;
+    background-color: rgba($background,0.2);
+    height: 50px;
+    width: 100%;
+    display: block;
+  }
+  &__textarea{
+    margin-top: 30px;
+    height: 285px;
+  }
+  &__btn-box{
+    display: flex;
+    label{
+      margin: 0 auto;
+    }
+  }
+  &__btn-inner{
     margin: 0 auto;
+  }
+  &__checkbox-input{
+    transition: all .3s;
+    margin-left: 15px;
+    @extend %checkbox-hidden;
+  }
+  &__checkbox-license{
+    text-decoration: none;
+    color: $default;
+    transition: all .3s;
+    &:hover{
+      color: $accent;
+    }
+  }
+  .jq-checkbox{
+    width: 16px;
+    height: 16px;
+    border: 1px solid $accent;
+    background-color: $accent;
+    border-radius: 2px;
+    top: 3px;
+    left: -10px;
+  }
+  .jq-checkbox.checked{
+    content: '';
+    background-image: url('../images/icons/checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__form-btnbox{
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  &__form-requaired{
+    align-items: center;
+    padding-left: 35px;
+    margin-top: 20px;
+    font-size: 14px;
+    span{
+      color: $accent;
+    }
   }
 }

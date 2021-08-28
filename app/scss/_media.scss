@@ -46,6 +46,45 @@
       display: flex;
     }
   }
+  .contacts{
+    &__form-wrapper{
+      display: block;
+    }
+    &__form-info{
+      max-width: 100%;
+    }
+    &__form-title{
+      text-align: center;
+    }
+    &__form-subtitle{
+      margin: 15px auto 0;
+      max-width: 100%;
+    }
+    &__formbox{
+      width: 100%;
+    }
+    &__textarea{
+      margin-top: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .contacts{
+    &__list-inner{
+      margin: 30px auto 20px;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    &__list{
+      display: block;
+    }
+    &__item + .contacts__item{
+      margin-top: 20px;
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -78,6 +117,19 @@
     &__img{
       float: none;
       margin: 0 auto 20px;
+    }
+  }
+  .contacts{
+    &__formbox{
+      display: block;
+      padding: 20px 0;
+    }
+    &__form{
+      padding: 0;
+    }
+    &__input-title{
+      top: 15px;
+      left: 10px;
     }
   }
   .footer{
@@ -144,6 +196,11 @@
       max-height: 100%;
     }
   }
+  .contacts{
+    &__form-requaired{
+      padding-left: 15px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
@@ -176,6 +233,12 @@
     bottom: 100px;
     left: 0;
     right: 0;
+  }
+  .contacts{
+    &__form-btn{
+      position: relative;
+      bottom: 0;
+    }
   }
 }
 

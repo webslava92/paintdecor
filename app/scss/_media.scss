@@ -85,6 +85,11 @@
       margin-top: 20px;
     }
   }
+  .stock{
+    &__list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 @media (max-width: 800px) {
@@ -201,6 +206,11 @@
       padding-left: 15px;
     }
   }
+  .stock{
+    &__list{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 
 @media (max-width: 400px) {
@@ -238,6 +248,14 @@
     &__form-btn{
       position: relative;
       bottom: 0;
+    }
+  }
+  .stock{
+    &__item-title{
+      font-size: 16px;
+      span{
+        font-size: 14px;
+      }
     }
   }
 }
